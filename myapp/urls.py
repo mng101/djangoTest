@@ -25,4 +25,6 @@ path("", views.HomePageView.as_view(), name="home"),
     path("login/", auth_views.LoginView.as_view(template_name="myapp/login.html"), name="login"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
     path("thanks/", views.ThanksPageView.as_view(), name="thanks"),
+    path("stocks/", views.StockCreateView.as_view(), name="stocks"),
+    path("stocks/<str:pk>/", views.StockUpdateView.as_view(), name="update"),
 ]
